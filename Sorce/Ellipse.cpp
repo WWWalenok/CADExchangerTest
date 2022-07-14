@@ -90,7 +90,7 @@ namespace curv
 
 	void  Ellipse::SetA(double _a)
 	{
-		a = _a;
+		a = (_a > 0 ? _a : 0);
 	}
 	double  Ellipse::GetA()
 	{
@@ -99,7 +99,7 @@ namespace curv
 
 	void  Ellipse::SetB(double _b)
 	{
-		b = _b;
+		b = (_b > 0 ? _b : 0);
 	}
 	double  Ellipse::GetB()
 	{

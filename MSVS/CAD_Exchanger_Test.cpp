@@ -17,16 +17,16 @@ int main()
     std::vector<curv::ICurve*> secondCont;
 
     double sp[]{
-        -1, 1, 2, 5,
-        0, 1, 1, 2,
-        0, 0, 1, -3
+        1, 0, 0, 0,
+        0, 1, 0, 0,
+        0, 0, 1, 0
     };
 
     for(int i = 0; i < 1000 ; i++)
     {
         curv::ICurve *t;
-        for(int j = 0; j < 12; j++)
-            sp[j] = rand() * RAND_TO_1 * 200 - 100;
+        //for(int j = 0; j < 12; j++)
+        //    sp[j] = rand() * RAND_TO_1 * 200 - 100;
         switch((rand() % 3))
         {
             case 0:

@@ -21,6 +21,8 @@
 
 namespace curv
 {
+	const double PI = 3.1415926535897932384626433832795;
+
 	class DLL_EXPORT ICurve
 	{
 	public:

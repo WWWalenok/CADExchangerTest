@@ -92,7 +92,7 @@ namespace curv
 
 	void  Circle::SetR(double _r)
 	{
-		r = _r;
+		r = (_r > 0 ? _r : 0);
 	}
 	double  Circle::GetR()
 	{

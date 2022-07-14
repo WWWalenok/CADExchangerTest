@@ -25,7 +25,7 @@ namespace curv
 		for(int n = 0; n < 3; n++)
 		{
 			double l = sqrt(
-				+space[0][n] * space[0][n]
+				+ space[0][n] * space[0][n]
 				+ space[1][n] * space[1][n]
 				+ space[2][n] * space[2][n]
 			);
@@ -72,6 +72,8 @@ namespace curv
 	}
 	void Helixe::GetPoint(double t, double *p)
 	{
+		const double __Koof = 0.5 / PI;
+
 		p[0] = space[0][3];
 		p[1] = space[1][3];
 		p[2] = space[2][3];
@@ -85,13 +87,13 @@ namespace curv
 		{
 			p[i] += space[i][0] * _cos * r;
 			p[i] += space[i][1] * _sin * r;
-			p[i] += space[i][2] * h * t;
+			p[i] += space[i][2] * h * t * __Koof;
 		}
 	}
 
 	void  Helixe::SetR(double _r)
 	{
-		r = _r;
+		r = (_r > 0 ? _r : 0);
 	}
 	double  Helixe::GetR()
 	{
